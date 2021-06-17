@@ -1,0 +1,11 @@
+name: Sleep
+
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to sleep
+    steps:
+      - name: single command
+        run: sleep 3600s
