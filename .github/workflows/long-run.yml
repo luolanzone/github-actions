@@ -1,0 +1,11 @@
+name: Long run
+
+on: [push,pull_request]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to sleep in a long time
+    steps:
+      - name: single command
+        run: sleep 7200s
