@@ -1,7 +1,7 @@
 name: Cancel Workflows
 on:
   workflow_run:
-    workflows: ["Sleep","Long run"]
+    workflows: ["Sleep","Long run","Long run 1", "Long run 2", "Long run 3"]
     types:
       - requested
 jobs:
