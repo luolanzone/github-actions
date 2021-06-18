@@ -15,15 +15,4 @@ jobs:
     steps:
       - name: single command
         run: sleep 7200s
-  hello_world_job_2:
-    runs-on: ubuntu-latest
-    name: A job to sleep
-    steps:
-      - name: single command
-        run: sleep 7200s
-  hello_world_job_3:
-    runs-on: ubuntu-latest
-    name: A job to sleep
-    steps:
-      - name: single command
-        run: sleep 7200s
+
