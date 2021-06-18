@@ -28,7 +28,13 @@ curl \
   -H "Accept: application/vnd.github.v3+json" \
   https://api.github.com/repos/luolanzone/github-actions/events > events.json
 ```
+* A way to print context
 
+```
+steps:
+  - name: Echo github obj
+    run: echo ${{ toJson(github) }}
+```
 ## Reference
 
 * [触发工作流程的事件](https://docs.github.com/cn/actions/reference/events-that-trigger-workflows)

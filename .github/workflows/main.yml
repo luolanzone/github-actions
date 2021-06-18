@@ -19,3 +19,19 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+  print_context_job:
+    runs-on: ubuntu-latest
+    name: A job to print context
+    steps:
+      - name: Echo github obj
+        run: echo "${{ toJson(github) }}"
+      - name: Echo env obj
+        run: echo "${{ toJson(env) }}"
+      - name: Echo job obj
+        run: echo "${{ toJson(job) }}"
+      - name: Echo steps obj
+        run: echo "${{ toJson(steps) }}"
+      - name: Echo runner obj
+        run: echo "${{ toJson(runner) }}"
+      - name: Echo needs obj
+        run: echo "${{ toJson(needs) }}"
