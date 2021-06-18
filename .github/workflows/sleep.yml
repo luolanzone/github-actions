@@ -1,9 +1,27 @@
 name: Sleep
 
-on: [push]
+on: [push,pull_request]
 
 jobs:
-  hello_world_job:
+  hello_world_job_0:
+    runs-on: ubuntu-latest
+    name: A job to sleep
+    steps:
+      - name: single command
+        run: sleep 3600s
+  hello_world_job_1:
+    runs-on: ubuntu-latest
+    name: A job to sleep
+    steps:
+      - name: single command
+        run: sleep 3600s
+  hello_world_job_2:
+    runs-on: ubuntu-latest
+    name: A job to sleep
+    steps:
+      - name: single command
+        run: sleep 3600s
+  hello_world_job_3:
     runs-on: ubuntu-latest
     name: A job to sleep
     steps:

@@ -1,4 +1,4 @@
-name: Long run
+name: Long run 1
 
 on: [push,pull_request]
 
