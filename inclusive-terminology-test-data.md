@@ -5,9 +5,4 @@ Below table is a word list which need your immediate action to remove in any cod
 
 | Word | Alternative |
 |--|--|
-|blacklist|**Recommended:** <br><li>denylist(n)</li><br><li>block(v)</li><br>**Other:**  <li>banned list (n)</li>|
-|whitelist|**Recommended:**  <br><li>    allowlist (n) </li><br><li>    approve (v)  </li><br>Other: <br><li>    safelist (n)</li><br><li>    acceptlist (n)</li><br><li>    approved list (n)  </li>|
-
-
-
- 
+|kill|terminate|

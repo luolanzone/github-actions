@@ -1,12 +1,7 @@
 name: Check Offensive Words
 
-on:
-  pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
+on: [push,pull_request]
+
 jobs:
   check-terminology:
     name: Check whether tests need to be run based on diff

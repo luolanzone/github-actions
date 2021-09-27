@@ -16,9 +16,15 @@ else
     exit 0
 fi
 echo "BASE SHA: $SHA"
-
+ls
+pwd
+echo "hello word"
 rootpath=$(git rev-parse --show-toplevel)
 files=($(git diff "$SHA" HEAD --name-only))
+
+git diff "$SHA" HEAD > diff
+echo "=== file diff ==="
+cat diff
 
 files_need_check=""
 for f in "${files[@]}";
