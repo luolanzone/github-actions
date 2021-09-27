@@ -33,7 +33,7 @@ curl \
 ```
 steps:
   - name: Echo github obj
-    run: echo ${{ toJson(github) }}
+    run: echo "${{ toJson(github) }}"
 ```
 ## Reference
 
