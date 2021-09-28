@@ -5,4 +5,3 @@ Below table is a word list which need your immediate action to remove in any cod
 
 | Word | Alternative |
 |--|--|
-|kill|terminate|

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# skip-terminology-file-check
 set -eo pipefail
 
 cat "$GITHUB_EVENT_PATH"
@@ -39,11 +40,26 @@ done
 
 result=false
 files_need_check_arr=($files_need_check)
+# for file in "${files_need_check_arr[@]}";
+# do
+#   set +e
+#   grep -w 'kill\|whitelist\|blacklist\|blackout\|brownout\|master\|slave\|segregate\|segregation' --binary-files=without-match $rootpath"/"$file
+#   if [ $? -eq 0 ];then
+#     echo "found offensive words in $file"
+#     result=true
+#   fi
+#   set -e
+# done
+
 for file in "${files_need_check_arr[@]}";
 do
   set +e
-  grep -w 'kill\|whitelist\|blacklist\|blackout\|brownout\|master\|slave\|segregate\|segregation' --binary-files=without-match $rootpath"/"$file
+  git diff "$SHA" HEAD $file > diffcontent
+  # check new added content only
+  cat diffcontent | grep '^+' | grep -w 'kill\|whitelist\|blacklist\|blackout\|brownout\|master\|slave\|segregate\|segregation' --binary-files=without-match
+ # grep -w 'kill\|whitelist\|blacklist\|blackout\|brownout\|master\|slave\|segregate\|segregation' --binary-files=without-match $rootpath"/"$file
   if [ $? -eq 0 ];then
+    echo "================"
     echo "found offensive words in $file"
     result=true
   fi
